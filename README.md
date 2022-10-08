@@ -10,7 +10,7 @@ __Authors:__ Yan Zhou
 
 ## Usage
 
-This GitHub repository is an R package called scDMV, which contains the source code needed to run the `scDMV` method. You need to download ZIP and install the package in R. After downloading the scDMV package, you can directly call the "run_scDMV" function to detect differentially methylated regions. The returns of "run_scDMV" function are p-values and regional level methylation difference (Δ) between two types of samples. In general, regions that satisfy p-values not greater than the p-value cutoff and ∆ greater than the ∆ cutoff are the final DMRs identified by the model. You can specify thresholds to screen for differentially methylated regions based on the p-values and Δ returned by the model.
+This GitHub repository contain an R package called 'scDMV_0.1.0', which contains the source code needed to run the `scDMV` method. You need to download ZIP and install the package in R. After downloading the scDMV package, you can directly call the "run_scDMV" function to detect differentially methylated regions. The returns of "run_scDMV" function are p-values and regional level methylation difference (Δ) between two types of samples. In general, regions that satisfy p-values not greater than the p-value cutoff and ∆ greater than the ∆ cutoff are the final DMRs identified by the model. You can specify thresholds to screen for differentially methylated regions based on the p-values and Δ returned by the model. 
 
 Here is a description of some of the important parameters in the `run_scDMV` function：
 
@@ -39,7 +39,7 @@ pvalues = scDMV_result$scDMVpvaluem
 dlt = scDMV_result$absd
 
 ```
-'chr3_8cVS8c_data.Rdata' is in the data folder.
+'chr3_8cVS8c_data.Rdata' is in the data folder and the raw data used in the simulation experiment and real data analysis are in raw_data.rar.
 
 ## Issues
 
