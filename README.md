@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # `scDMV`
 
 > A statistical method to detect DNA methylation differences for single-cell bisulfite sequencing data.
@@ -48,6 +47,5 @@ If you encounter any bugs or have any specific feature requests, please [file an
 issue](https://github.com/PLX-m/scDMV/issues).
 
 ---
-=======
-# scDMV
->>>>>>> 893232999ccb4adf9fdbb8bd31d87d86d85c8880
+
+
