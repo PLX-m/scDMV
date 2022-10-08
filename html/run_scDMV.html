@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Run scDMV</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for run_scDMV {scDMV}"><tr><td>run_scDMV {scDMV}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Run scDMV</h2>
+
+<h3>Description</h3>
+
+<p>Run scDMV
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+run_scDMV(treadn, treadx, testRegion, sample8c, sample4c, m, n)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>treadn</code></td>
+<td>
+<p>total reads matrix</p>
+</td></tr>
+<tr valign="top"><td><code>treadx</code></td>
+<td>
+<p>methylation reads matrix</p>
+</td></tr>
+<tr valign="top"><td><code>testRegion</code></td>
+<td>
+<p>the list generated after site filtering and region division</p>
+</td></tr>
+<tr valign="top"><td><code>sample8c</code></td>
+<td>
+<p>the location of the second type sample(8cell sample)</p>
+</td></tr>
+<tr valign="top"><td><code>sample4c</code></td>
+<td>
+<p>the location of the first type sample(4cell sample)</p>
+</td></tr>
+<tr valign="top"><td><code>m</code></td>
+<td>
+<p>the number of columns where the first gene sequence in the file is located</p>
+</td></tr>
+<tr valign="top"><td><code>n</code></td>
+<td>
+<p>the number of columns where the last gene sequence is located</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function estimates the four parameter values of the scDMV model based
+on the total reads and methylation reads given by the user and then run
+scDMV model to get pvalues and regional level methylation difference
+Δ(absd) between two types of samples.
+</p>
+
+
+<h3>Value</h3>
+
+<p>pvalues(scSMVpvaluem) and regional level methylation difference Δ(absd) between two types of samples.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>scDMV</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>
