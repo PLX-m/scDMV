@@ -25,6 +25,7 @@ Here is a description of some of the important parameters in the `run_scDMV` fun
 ## Example
 ```
 library(scDMV)
+# 真实数据分析
 # 8c vs 8c 无差异实验
 load("chr3_8cVS8c_data.Rdata")
 
@@ -38,8 +39,36 @@ scDMV_result = run_scDMV(treadn,treadx,testRegion,sample8c,sample4c,1,40)
 pvalues = scDMV_result$scDMVpvaluem
 dlt = scDMV_result$absd
 
+# 4c vs 8c 有差异实验
+#导入数据
+load("chr3_4cVS8c_data.Rdata")
+
+treadn = chr3_data$treadn
+treadx = chr3_data$treadx
+testRegion = chr3_data$testRegion
+sample8c=c(2:12,16,17,19,21:25,27,29,33,35,36,38:40,43:45,47:49,52:55,57:60,62:64,66,69,70,73)
+sample4c=c(1,13:15,18,20,26,28,30:32,34,37,41,42,46,50,51,56,61,65,67,68,71,72)
+
+scDMV_result = run_scDMV(treadn,treadx,testRegion,sample8c,sample4c,1,73)
+pvalues = scDMV_result$scDMVpvaluem
+dlt = scDMV_result$absd
+load("chr3_8cVS8c_data.Rdata")
+
+# 模拟实验
+# 有差异实验
+run: simulation_4c8c.r
+testRegion = simulation$testRegion
+pvalues = simulation$scSMVpvalue
+dlt = simulation$dlt
+
+# 无差异实验
+run: simulation_8c8c.r 
+testRegion = simulation$testRegion
+pvalues = simulation$scSMVpvalue
+dlt = simulation$dlt
+
 ```
-'chr3_8cVS8c_data.Rdata' is in the data folder and the raw data used in the simulation experiment and real data analysis are in raw_data.rar.
+'chr3_8cVS8c_data.Rdata' and 'chr3_4cVS8c_data.Rdata' are in the data folder. We also put some raw data used in the simulation experiments and real data analysis in raw_data.rar.
 
 ## Issues
 
